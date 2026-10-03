@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "product_name": "TeamPulse",
+    "subtitle": "Async team health and delivery signals for distributed product teams",
+    "version": "0.1",
+    "date": "2026-10-03",
+    "owner": "Example only",
+    "context": "Early discovery"
+  },
+  "vision": [
+    {
+      "text": "Help distributed product teams detect collaboration and delivery friction early enough to act before it becomes a quarterly surprise.",
+      "status": "assumption"
+    }
+  ],
+  "target_users": [
+    {
+      "text": "Product and engineering managers leading distributed teams of roughly 6–15 people.",
+      "status": "assumption"
+    }
+  ],
+  "problems_needs": [
+    {
+      "text": "Managers often learn about delivery or collaboration problems only after deadlines slip or engagement drops.",
+      "status": "assumption"
+    },
+    {
+      "text": "Team members experience repeated status requests across meetings and chat.",
+      "status": "unknown"
+    }
+  ],
+  "current_alternatives": [
+    {
+      "text": "Weekly status meetings, manual Slack follow-ups, project dashboards, and manager intuition.",
+      "status": "assumption"
+    }
+  ],
+  "value_proposition": [
+    {
+      "text": "A lightweight recurring pulse that turns team signals into a small number of actionable patterns without adding another long meeting.",
+      "status": "assumption"
+    }
+  ],
+  "business_outcomes": [
+    {
+      "text": "Create a repeatable subscription product for teams that already use collaboration and delivery tools.",
+      "status": "assumption"
+    }
+  ],
+  "success_metrics": [
+    {
+      "name": "Weekly active teams",
+      "target": "TBD after baseline",
+      "timeframe": "First 90 days",
+      "status": "unknown"
+    },
+    {
+      "name": "Percent of surfaced signals that lead to a team action",
+      "target": "TBD",
+      "timeframe": "Pilot",
+      "status": "unknown"
+    }
+  ],
+  "key_capabilities": [
+    {
+      "text": "Very short recurring team pulse.",
+      "status": "assumption"
+    },
+    {
+      "text": "Pattern detection across pulse responses and delivery context.",
+      "status": "assumption"
+    },
+    {
+      "text": "Action-oriented team view rather than individual performance scoring.",
+      "status": "assumption"
+    }
+  ],
+  "assumptions_risks": [
+    {
+      "text": "Teams will answer a recurring pulse often enough to produce useful signal.",
+      "status": "assumption"
+    },
+    {
+      "text": "Managers will trust aggregated signals without interpreting them as employee surveillance.",
+      "status": "assumption"
+    }
+  ],
+  "evidence": [
+    {
+      "text": "No validated customer evidence has been attached to this example.",
+      "status": "unknown"
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "Which existing workflow would users replace or reduce if this worked?",
+      "status": "unknown"
+    },
+    {
+      "text": "What signal is useful enough that a manager would act on it within a week?",
+      "status": "unknown"
+    },
+    {
+      "text": "What privacy expectations would block adoption?",
+      "status": "unknown"
+    }
+  ]
+}
