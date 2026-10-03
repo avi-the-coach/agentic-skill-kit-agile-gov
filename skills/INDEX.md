@@ -21,16 +21,12 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 
 ## Available skills
 
-_No skills have been added yet._
+### Product Canvas
 
-When the first skill is created, add it here using this format:
-
-### Skill Name
-
-- **Path:** `skills/skill-name/SKILL.md`
-- **Purpose:** One-sentence description of the capability.
-- **Use when:** Clear trigger conditions.
-- **Typical inputs:** Text, files, structured answers, sources, datasets, etc.
-- **Primary artifact:** The default durable output.
-- **Tags:** `tag-one`, `tag-two`
-- **Relevant roles:** Product Manager, Product Coach, etc.
+- **Path:** `skills/product-canvas/SKILL.md`
+- **Purpose:** Turn product context, evidence, assumptions, and open questions into a coherent visual Product Canvas for alignment and decision-making.
+- **Use when:** The user wants to create, fill, refresh, review, or synthesize a visual one-page product canvas or product-framing board.
+- **Typical inputs:** Product descriptions, structured interview answers, customer/user research, briefs, PRDs, analytics, strategy material, stakeholder notes, URLs, and prior artifacts.
+- **Primary artifact:** Visual Product Canvas rendered in the runtime's best native artifact surface (ChatGPT/OpenAI Canvas-equivalent, Claude Artifact) with standalone self-contained HTML as the fallback.
+- **Tags:** `product-management`, `product-framing`, `discovery`, `alignment`, `canvas`
+- **Relevant roles:** Product Manager, Product Coach
