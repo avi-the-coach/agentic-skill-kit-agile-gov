@@ -30,3 +30,13 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 - **Primary artifact:** Visual Product Canvas rendered in the runtime's best native artifact surface (ChatGPT/OpenAI Canvas-equivalent, Claude Artifact) with standalone self-contained HTML as the fallback.
 - **Tags:** `product-management`, `product-framing`, `discovery`, `alignment`, `canvas`
 - **Relevant roles:** Product Manager, Product Coach
+
+### PI Feature Readiness Review
+
+- **Path:** `skills/pi-feature-readiness-review/SKILL.md`
+- **Purpose:** Review feature quality and planning readiness before PI Planning and provide constructive refinement feedback, questions, and recommended next actions.
+- **Use when:** The user wants to review a portfolio of features for PI Planning, identify refinement gaps, or use the standard PI feature input workbook.
+- **Typical inputs:** Standard XLSX template containing Features, Stories, and Dependencies; non-standard feature spreadsheets when mapping is feasible.
+- **Primary artifact:** XLSX review workbook with feature-level feedback, recommendations, questions, and portfolio summary.
+- **Tags:** `product-management`, `pi-planning`, `feature-readiness`, `refinement`, `agile`
+- **Relevant roles:** Product Manager, Product Coach, Agile Coach
