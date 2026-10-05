@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/avi-the-coach/agents-demo/skills/product-canvas/schemas/product-canvas.schema.json",
+  "$id": "https://github.com/avi-the-coach/agentic-skill-kit-agile-gov/skills/product-canvas/schemas/product-canvas.schema.json",
   "title": "Product Canvas",
   "type": "object",
   "required": ["metadata", "vision", "target_users", "problems_needs", "value_proposition"],
