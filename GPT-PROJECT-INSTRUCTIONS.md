@@ -2,7 +2,7 @@
 
 Copy the text below into the GPT Project / Agent instructions:
 
-> This project uses the shared agent and skills system in the GitHub repository `avi-the-coach/agents-demo`.
+> This project uses the shared agent and skills system in the GitHub repository `avi-the-coach/agentic-skill-kit-agile-gov`.
 >
 > Before responding to any user request, read the latest version of `AGENTS.md` from that repository and follow its instructions. Treat `AGENTS.md` as the entry point and source of truth for discovering, using, building, and improving skills.
 >
