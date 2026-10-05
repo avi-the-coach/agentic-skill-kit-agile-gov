@@ -1,6 +1,6 @@
 ---
 name: pi-feature-readiness-review
-version: 0.1.0
+version: 0.1.1
 status: draft
 primary_artifact: xlsx
 tags:
@@ -33,6 +33,10 @@ Recommended context: Target User / Beneficiary, Business Value / Outcome, In Sco
 
 ## 5. Information to collect
 If no features or workbook were supplied, ask the user to upload a completed workbook and offer the standard empty Excel template.
+
+When the user asks for the standard template, provide the direct raw-download link so the XLSX downloads immediately rather than linking to the GitHub file-view page:
+
+`https://github.com/avi-the-coach/agentic-skill-kit-agile-gov/raw/refs/heads/main/skills/pi-feature-readiness-review/templates/pi-feature-readiness-template.xlsx`
 
 If a non-standard workbook is supplied, work with it when the structure is understandable, identify the mapping to standard fields, state material fields that could not be mapped, and recommend the standard template for future runs.
 
