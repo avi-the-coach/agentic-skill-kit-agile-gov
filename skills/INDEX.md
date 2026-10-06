@@ -40,3 +40,13 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 - **Primary artifact:** XLSX review workbook with feature-level feedback, recommendations, questions, and portfolio summary.
 - **Tags:** `product-management`, `pi-planning`, `feature-readiness`, `refinement`, `agile`
 - **Relevant roles:** Product Manager, Product Coach, Agile Coach
+
+### Opportunity Framing
+
+- **Path:** `skills/opportunity-framing/SKILL.md`
+- **Purpose:** Turn an early idea, pain point, perceived need, or proposed solution into an evidence-aware, strategy-linked opportunity and determine whether it is ready to proceed to Product Discovery.
+- **Use when:** The user wants to frame an opportunity before discovery, separate a problem from a proposed solution, assess strategic relevance, or decide whether an early need is sufficiently justified and understood to explore further.
+- **Typical inputs:** Initial ideas or pain points, proposed solutions, strategy documents and objectives, target audience/process context, existing evidence and data, current capabilities, constraints, ownership information, and prior artifacts.
+- **Primary artifact:** 1–2 page editable Opportunity Brief, preferably DOCX, designed to serve as a handoff input to a downstream Product Discovery workflow.
+- **Tags:** `product-management`, `service-design`, `opportunity-framing`, `strategy`, `pre-discovery`
+- **Relevant roles:** Product Manager, Product Coach, Business Owner
