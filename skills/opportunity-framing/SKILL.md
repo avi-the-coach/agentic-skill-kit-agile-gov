@@ -1,8 +1,8 @@
 ---
 name: opportunity-framing
-version: 0.1.0
+version: 0.1.1
 status: draft
-primary_artifact: docx
+primary_artifact: html
 tags:
   - product-management
   - service-design
@@ -175,17 +175,21 @@ During the interaction:
    - If another gate state applies, state what must change or be clarified before discovery.
 
 9. **Create the Opportunity Brief**
-   - Use `templates/opportunity-brief-template.md` as the content structure.
-   - Keep the brief concise enough to fit roughly 1–2 pages in a normal document layout.
-   - Prefer a durable editable DOCX artifact when the runtime supports it.
-   - If DOCX generation is unavailable, produce the closest useful editable document format, preferably Markdown.
+   - Use `templates/opportunity-brief-template.md` as the canonical content structure.
+   - Keep the brief concise enough to fit roughly 1–2 pages in a normal desktop or print layout.
+   - Render the primary artifact as a **standalone self-contained HTML file**.
+   - Prefer a polished, executive-friendly visual layout with clear hierarchy, cards/callouts where useful, and no external runtime dependencies.
+   - For Hebrew or other right-to-left languages, set the document direction correctly (for example `dir="rtl"`) and explicitly handle embedded left-to-right terms so mixed Hebrew/English text remains readable.
+   - Include print-friendly CSS so the brief can be printed or exported to PDF cleanly if the user chooses.
+   - **Do not generate DOCX/Word output for this skill.**
+   - If HTML generation is genuinely unavailable in the current environment, produce the closest supported web/document artifact and state the limitation.
    - The brief must stand alone without requiring the chat transcript.
 
 ## 8. Output
 
 ### Primary artifact
 
-A 1–2 page **Opportunity Brief** containing:
+A polished, self-contained **HTML Opportunity Brief** containing:
 
 - Opportunity / problem statement
 - Affected audience and context
@@ -199,9 +203,11 @@ A 1–2 page **Opportunity Brief** containing:
 - Decisions or approvals still required
 - Source and status notes
 
+The artifact should be responsive, readable on desktop, and print-friendly. For RTL languages, correct directionality is a quality requirement.
+
 Suggested filename:
 
-`Opportunity-Brief-<ShortName>-v1.docx`
+`Opportunity-Brief-<ShortName>-v1.html`
 
 ### Discovery handoff contract
 
@@ -237,15 +243,19 @@ Before handoff, verify:
 - The artifact identifies the next questions rather than pretending they are already answered.
 - The Opportunity Brief is concise, internally consistent, and usable without the conversation.
 - The gate is presented as a recommendation requiring appropriate business/management judgment, not as an already approved decision.
+- The HTML is self-contained and has no required external dependency.
+- RTL/LTR directionality is correct for the document language and embedded terms.
+- The page remains readable and well structured when printed or exported to PDF.
+- No DOCX/Word artifact is generated.
 
 ## 10. Assets and code
 
 - `templates/opportunity-brief-template.md` — canonical content structure for the 1–2 page Opportunity Brief.
 
-No script or schema is required in v0.1. Add them later only if repeated use shows that deterministic rendering, validation, or structured handoff materially improves execution.
+No script or dedicated HTML template is required in v0.1.1. Add one later only if repeated use shows that deterministic rendering or a standardized visual identity materially improves execution.
 
 ## 11. Examples
 
-No worked example is included in v0.1.
+No worked example is included in v0.1.1.
 
 A good execution may end with **Ready for Discovery**, but it is equally valid to recommend **Needs Clarification**, **Reframe**, or **Park / Stop** when the available evidence and strategic logic do not justify discovery.
