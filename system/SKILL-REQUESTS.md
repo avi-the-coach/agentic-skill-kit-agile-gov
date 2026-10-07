@@ -2,34 +2,35 @@
 
 ## Purpose
 
-This workflow turns missing reusable capabilities into visible, trackable requests that humans and agents can refine together and, when accepted, implement as repository skills.
+This workflow is the mandatory starting point for every new skill in the shared kit. It turns a raw idea or request into a structured, visible, trackable skill definition that humans and agents can refine together before implementation.
 
-The GitHub Issue is the durable system of record for the request. Chat may help formulate or discuss the request, but material questions, decisions, status changes, and implementation outcomes should be reflected in the Issue thread.
+The GitHub Issue is the durable system of record for the new skill's framing and lifecycle. It is not only a request queue item: it is the standard definition artifact that captures why the skill should exist, what it should do, what inputs it expects, what output it should produce, and the constraints that should guide implementation. Chat may help formulate or discuss the request, but material questions, decisions, status changes, and implementation outcomes should be reflected in the Issue thread.
 
-## When a build request must become a Skill Request
+## Request-first rule for new skills
 
-A user may explicitly say "build a skill" even when the current agent cannot write to the shared repository.
+When a user says "build a skill", "create a skill", "add a new skill", or otherwise asks for a new reusable capability, do **not** begin by creating repository files.
 
-In that case:
+First:
 
-1. Check repository code-write permission when the environment supports it.
-2. If code write access is unavailable, explain briefly that the agent cannot publish the skill into the shared repository under the current identity.
-3. Do not proceed as though a repository skill was created.
-4. Offer to submit a Skill Request Issue instead.
-5. With explicit user approval, create the Issue directly when Issue write access is available; otherwise provide the public Issue Form and ready-to-paste content.
+1. Check `skills/INDEX.md` and search existing Issues when available to avoid duplicates.
+2. Use the Skill Request structure to frame the capability.
+3. Ask only the missing questions needed to complete a useful request.
+4. Obtain the user's explicit approval to create the Issue on their behalf.
+5. Create or identify the Skill Request Issue.
+6. Only then, if the current agent has repository code-write permission and the user wants to proceed, transition to implementation using `system/BUILDING-SKILLS.md`.
 
-Repository code-write access and Issue-write access are separate. A user who cannot push repository changes may still be able to open and track an Issue in this public repository.
+This rule applies equally to repository owners, maintainers, collaborators, and external users. Repository write permission controls whether the agent may implement after framing; it does not determine whether the Skill Request step is required.
 
 ## When to create a Skill Request
 
-Create or offer a Skill Request when all of the following are true:
+Create a Skill Request for every new reusable skill when all of the following are true:
 
 - no suitable skill is found after checking `skills/INDEX.md`;
 - the requested capability is likely to be reused, not just a one-off task;
-- the user is asking for the capability to exist in the shared skill kit, or agrees that it should be considered by the maintainers;
+- the user is asking for the capability to exist in the shared skill kit;
 - the user explicitly approves creating the Issue on their behalf.
 
-Do not create a Skill Request merely because an agent cannot complete a task in the current environment. Tool limitations and reusable skill gaps are different things.
+Do not create a Skill Request merely because an agent cannot complete a one-off task in the current environment. Tool limitations and reusable skill gaps are different things. But when the intent is to add a **new reusable skill** to this repository, the Skill Request is always the first step.
 
 ## Before submitting
 
@@ -91,7 +92,9 @@ Questions should help clarify matters such as:
 
 Do not run a full skill-design interview before accepting a request unless that depth is necessary. The Issue can start lightweight and become more detailed after acceptance.
 
-## From accepted request to skill
+## From framed request to implementation
+
+A new skill may move to implementation once its Issue is sufficiently framed for the next build step. Formal maintainer triage can happen before or during this transition depending on the working mode, but the Issue must already exist.
 
 When implementation starts, follow `system/BUILDING-SKILLS.md` or `system/IMPROVING-SKILLS.md` as appropriate.
 
