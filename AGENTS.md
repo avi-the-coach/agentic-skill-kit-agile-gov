@@ -21,7 +21,7 @@ For every user request:
 4. If a role is explicitly relevant, consult the appropriate file under `roles/` for contextual guidance. Roles are views over skills; they do not own skills.
 5. Execute the skill according to its instructions and the shared system rules.
 6. When practical, finish with a durable downloadable artifact rather than only chat text.
-7. If no suitable skill exists, either complete the task directly when simple, propose/build a reusable skill when the user is asking to create it, or use the shared Skill Request mechanism for reusable capability gaps that should be considered by the repository maintainers.
+7. If no suitable skill exists, complete the task directly when simple. If the user wants a new reusable skill added to the shared kit, always start with the Skill Request workflow before any implementation, even when the current agent has repository write access.
 
 ## Skill discovery
 
@@ -97,18 +97,21 @@ When supported by the current environment, agents may:
 
 Never assume code is safe merely because it is in the repository. Inspect unfamiliar scripts before execution and respect the current environment's security/tool constraints.
 
-## Repository write permissions and build-vs-request routing
+## New-skill request-first workflow
 
-When the user asks to create, build, add, or materially improve a skill, determine whether the current agent can write changes back to this repository before choosing the workflow.
+Every **new skill** begins as a Skill Request Issue. The Issue is not merely an access workaround; it is the standard framing artifact for defining the capability before implementation.
 
 Use this routing rule:
 
-1. **Repository code write access is available** — if the connected GitHub identity/tooling clearly has permission to write repository contents (for example push/write/maintain/admin capability), treat the request as a build/improvement request and follow the relevant build guidance.
-2. **Repository code write access is not available** — do not pretend to build the shared repository skill and do not stop at a local draft. Treat the request as a Skill Request: help the user formulate it and, with explicit approval, submit an Issue using `system/SKILL-REQUESTS.md`.
-3. **Permission is unknown** — when the environment supports inspecting repository permissions, check them. If permission cannot be verified, do not assume repository write access. Explain the limitation and use the Skill Request path instead.
-4. **Issue access is separate from code write access** — a user may be unable to push code but still be able to open an Issue in this public repository. If the agent has GitHub Issue write capability, it may create the Issue after explicit user approval. Otherwise provide the public **Request a new skill** Issue Form.
+1. **New skill requested** — first follow `system/SKILL-REQUESTS.md`, regardless of who the user is or whether the current agent can write to the repository.
+2. Use the Skill Request structure to clarify the capability, outcome, use cases, inputs, expected output, reusability, examples, and constraints. Ask only the missing questions needed to make the request useful.
+3. Create or identify the Skill Request Issue before implementation. The Issue becomes the durable source of truth for the new skill's intent and requirements.
+4. **Repository code write access is available** — after the request is sufficiently framed and the user explicitly asks to proceed with implementation, the agent may build the skill by following `system/BUILDING-SKILLS.md`.
+5. **Repository code write access is not available** — stop at the Skill Request workflow. Do not pretend the shared repository skill was created.
+6. **Permission is unknown** — inspect permissions when possible. Never assume repository code write access.
+7. **Issue access is separate from code write access** — a user may be unable to push code but still be able to open and track a Skill Request in this public repository.
 
-Never attempt repository code changes on behalf of a user when the connected identity lacks the required repository write permission.
+For materially improving an existing skill, follow the improvement workflow; a new Skill Request is optional unless the change is effectively a new capability or the user wants it tracked as a request.
 
 ## Building and improving skills
 
@@ -126,17 +129,19 @@ When adding or materially changing a skill, update `skills/INDEX.md` in the same
 
 ## Skill requests and capability gaps
 
-Follow `system/SKILL-REQUESTS.md` when a user wants a reusable capability that is not currently available and they are not asking you to build it immediately.
+Follow `system/SKILL-REQUESTS.md` whenever a user wants a new reusable capability added to the shared skill kit. This is required even when the user also wants it built immediately and the current agent has repository write access.
 
 Default behavior:
 
 1. Check `skills/INDEX.md` first to avoid duplicate requests.
 2. Distinguish a one-off task from a reusable capability gap.
-3. If it is reusable, briefly explain that no matching skill currently exists and offer to submit a Skill Request to this repository.
-4. Never create an Issue on the user's behalf without their explicit approval.
-5. If approved and the environment has GitHub Issue write access, create the Issue directly using the repository's Skill Request structure. Otherwise, direct the user to the repository's **Request a new skill** Issue Form or provide a ready-to-paste request.
-6. Use the Issue thread as the durable conversation for missing information, decisions, status, implementation links, and closure.
-7. When a new skill is implemented from a request, comment on the originating Issue with the skill path/link and close it as completed. When practical, preserve the originating Issue number in the skill documentation for traceability.
+3. If it is a new reusable skill, use the Skill Request structure as the framing step before implementation.
+4. Ask only for missing information needed to make the request useful; do not ask the user to repeat information already available.
+5. Never create an Issue on the user's behalf without their explicit approval.
+6. If approved and the environment has GitHub Issue write access, create the Issue directly using the repository's Skill Request structure. Otherwise, direct the user to the repository's **Request a new skill** Issue Form or provide a ready-to-paste request.
+7. Use the Issue thread as the durable source of truth for the skill definition, missing information, decisions, status, implementation links, and closure.
+8. If the current agent also has repository code write access and the user wants to continue immediately, implementation may begin only after the Skill Request exists and is sufficiently framed.
+9. When the new skill is implemented, comment on the originating Issue with the skill path/link and close it as completed. When practical, preserve the originating Issue number in the skill documentation for traceability.
 
 ## Architecture principles
 
