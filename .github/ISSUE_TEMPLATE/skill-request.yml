@@ -1,0 +1,91 @@
+name: Request a new skill
+description: Propose a reusable capability for the shared agentic skill kit.
+title: "[Skill Request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a reusable capability. Humans and agents are both welcome to submit requests.
+
+        Before submitting, please check `skills/INDEX.md` to see whether a suitable skill already exists. You do not need to know every implementation detail; missing information can be refined in the Issue conversation.
+
+  - type: textarea
+    id: capability
+    attributes:
+      label: Requested capability
+      description: What should the agent be able to do?
+      placeholder: "Example: Help a product team prioritize candidate features using value, risk, effort, strategic alignment, and dependencies."
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What useful result are you trying to achieve?
+      placeholder: "Describe the result or decision you want, rather than only the proposed solution."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Use cases / context
+      description: When would you use this capability? Who would typically use it?
+      placeholder: "One or two real examples are enough."
+    validations:
+      required: true
+
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Typical inputs
+      description: What information, files, systems, URLs, or prior artifacts would normally be available?
+      placeholder: "For example: spreadsheet backlog, strategy document, user notes, free-form text."
+    validations:
+      required: false
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+      description: What should the agent produce at the end?
+      placeholder: "For example: ranked backlog with rationale, HTML brief, XLSX review, decision memo."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reusable
+    attributes:
+      label: Why should this be reusable?
+      description: Why does this belong in the shared skill kit rather than being a one-off task?
+      placeholder: "Who else might use it, or how often does this need recur?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples, constraints, or additional context
+      description: Optional examples, edge cases, organizational constraints, or quality expectations.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: submitted_by
+    attributes:
+      label: How was this request prepared?
+      options:
+        - Human-written
+        - Agent-assisted
+        - Agent-submitted with user approval
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the current skills index and did not find a suitable existing skill.
+          required: true
