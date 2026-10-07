@@ -6,6 +6,20 @@ This workflow turns missing reusable capabilities into visible, trackable reques
 
 The GitHub Issue is the durable system of record for the request. Chat may help formulate or discuss the request, but material questions, decisions, status changes, and implementation outcomes should be reflected in the Issue thread.
 
+## When a build request must become a Skill Request
+
+A user may explicitly say "build a skill" even when the current agent cannot write to the shared repository.
+
+In that case:
+
+1. Check repository code-write permission when the environment supports it.
+2. If code write access is unavailable, explain briefly that the agent cannot publish the skill into the shared repository under the current identity.
+3. Do not proceed as though a repository skill was created.
+4. Offer to submit a Skill Request Issue instead.
+5. With explicit user approval, create the Issue directly when Issue write access is available; otherwise provide the public Issue Form and ready-to-paste content.
+
+Repository code-write access and Issue-write access are separate. A user who cannot push repository changes may still be able to open and track an Issue in this public repository.
+
 ## When to create a Skill Request
 
 Create or offer a Skill Request when all of the following are true:
