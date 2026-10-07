@@ -97,6 +97,19 @@ When supported by the current environment, agents may:
 
 Never assume code is safe merely because it is in the repository. Inspect unfamiliar scripts before execution and respect the current environment's security/tool constraints.
 
+## Repository write permissions and build-vs-request routing
+
+When the user asks to create, build, add, or materially improve a skill, determine whether the current agent can write changes back to this repository before choosing the workflow.
+
+Use this routing rule:
+
+1. **Repository code write access is available** — if the connected GitHub identity/tooling clearly has permission to write repository contents (for example push/write/maintain/admin capability), treat the request as a build/improvement request and follow the relevant build guidance.
+2. **Repository code write access is not available** — do not pretend to build the shared repository skill and do not stop at a local draft. Treat the request as a Skill Request: help the user formulate it and, with explicit approval, submit an Issue using `system/SKILL-REQUESTS.md`.
+3. **Permission is unknown** — when the environment supports inspecting repository permissions, check them. If permission cannot be verified, do not assume repository write access. Explain the limitation and use the Skill Request path instead.
+4. **Issue access is separate from code write access** — a user may be unable to push code but still be able to open an Issue in this public repository. If the agent has GitHub Issue write capability, it may create the Issue after explicit user approval. Otherwise provide the public **Request a new skill** Issue Form.
+
+Never attempt repository code changes on behalf of a user when the connected identity lacks the required repository write permission.
+
 ## Building and improving skills
 
 For new skills, follow:
