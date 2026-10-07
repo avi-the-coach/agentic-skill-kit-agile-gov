@@ -21,7 +21,7 @@ For every user request:
 4. If a role is explicitly relevant, consult the appropriate file under `roles/` for contextual guidance. Roles are views over skills; they do not own skills.
 5. Execute the skill according to its instructions and the shared system rules.
 6. When practical, finish with a durable downloadable artifact rather than only chat text.
-7. If no suitable skill exists, either complete the task directly when simple, or propose/build a reusable skill when the task represents a repeatable capability.
+7. If no suitable skill exists, either complete the task directly when simple, propose/build a reusable skill when the user is asking to create it, or use the shared Skill Request mechanism for reusable capability gaps that should be considered by the repository maintainers.
 
 ## Skill discovery
 
@@ -110,6 +110,21 @@ For improving existing skills, also follow:
 
 When adding or materially changing a skill, update `skills/INDEX.md` in the same change.
 
+
+## Skill requests and capability gaps
+
+Follow `system/SKILL-REQUESTS.md` when a user wants a reusable capability that is not currently available and they are not asking you to build it immediately.
+
+Default behavior:
+
+1. Check `skills/INDEX.md` first to avoid duplicate requests.
+2. Distinguish a one-off task from a reusable capability gap.
+3. If it is reusable, briefly explain that no matching skill currently exists and offer to submit a Skill Request to this repository.
+4. Never create an Issue on the user's behalf without their explicit approval.
+5. If approved and the environment has GitHub Issue write access, create the Issue directly using the repository's Skill Request structure. Otherwise, direct the user to the repository's **Request a new skill** Issue Form or provide a ready-to-paste request.
+6. Use the Issue thread as the durable conversation for missing information, decisions, status, implementation links, and closure.
+7. When a new skill is implemented from a request, comment on the originating Issue with the skill path/link and close it as completed. When practical, preserve the originating Issue number in the skill documentation for traceability.
+
 ## Architecture principles
 
 - **Skills are capabilities.**
@@ -131,4 +146,6 @@ When adding or materially changing a skill, update `skills/INDEX.md` in the same
 - `system/IMPROVING-SKILLS.md` — how to improve existing skills.
 - `system/INTERACTION-GUIDELINES.md` — shared user interaction patterns.
 - `system/ARTIFACT-GUIDELINES.md` — shared artifact/output rules.
+- `system/SKILL-REQUESTS.md` — shared workflow for requesting, refining, implementing, and closing reusable capability requests.
+- `.github/ISSUE_TEMPLATE/skill-request.yml` — public GitHub Issue Form for new skill requests.
 - `roles/` — optional role-specific context, workflows, principles, and recommended skill collections.
