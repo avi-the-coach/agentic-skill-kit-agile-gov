@@ -1,5 +1,16 @@
 # Building Skills
 
+## Permission gate
+
+Before modifying the shared repository, verify that the current connected GitHub identity/tooling has repository code write permission.
+
+- If write access is available, continue with this build workflow.
+- If write access is unavailable, do not create or modify repository files. Route the request to `system/SKILL-REQUESTS.md` instead.
+- If permission is unknown and can be inspected, inspect it. If it cannot be verified, do not assume write access.
+- Issue creation is a separate permission path: users without repository code write access may still submit a Skill Request Issue.
+
+This distinction matters because "build a skill" can mean either **implement it in the shared repository** or **request that maintainers implement it**. The agent must choose based on actual repository permissions, not on the wording alone.
+
 ## When to build a skill
 
 Create a new skill when the capability is likely to be reused and has a recognizable input → process → artifact pattern.
