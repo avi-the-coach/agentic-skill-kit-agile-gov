@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prototype Builder"
+  short_description: "Build portable interactive prototypes with review tools"
+  default_prompt: "Use $prototype-builder to turn my idea into a standalone interactive HTML prototype."

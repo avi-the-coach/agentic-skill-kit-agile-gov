@@ -50,3 +50,13 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 - **Primary artifact:** Polished, standalone, self-contained HTML Opportunity Brief (roughly 1–2 pages) designed for executive review and as a handoff input to a downstream Product Discovery workflow.
 - **Tags:** `product-management`, `service-design`, `opportunity-framing`, `strategy`, `pre-discovery`
 - **Relevant roles:** Product Manager, Product Coach, Business Owner
+
+### Prototype Builder
+
+- **Path:** `skills/prototype-builder/SKILL.md`
+- **Purpose:** Turn requirements or a rough idea into a polished standalone interactive prototype and contextual working specification, with persistent local data, reviewer comments and JSON exchange.
+- **Use when:** The user wants to build or revise a prototype, stakeholder demo, usability walkthrough or interactive specification in ChatGPT or Claude Projects.
+- **Typical inputs:** PRD/specifications, product canvases, meeting notes, operational challenges, free-form ideas, existing prototype HTML and review JSON.
+- **Primary artifact:** One self-contained HTML file with embedded CSS/JavaScript; optional companion JSON data/review snapshot.
+- **Tags:** `product-management`, `prototyping`, `requirements`, `usability`, `interactive-specification`
+- **Relevant roles:** Product Manager, Product Coach, Business Analyst, Agile Coach

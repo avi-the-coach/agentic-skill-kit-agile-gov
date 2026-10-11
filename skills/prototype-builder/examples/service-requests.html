@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>פרוטוטייפ אינטראקטיבי</title><style>:root{--ink:#182e43;--muted:#54697b;--accent:#087f78;--line:#d9e3e9;--paper:#fff;--bg:#f3f6f8;color-scheme:light;font-family:Arial,"Noto Sans Hebrew",sans-serif;color:var(--ink);background:var(--bg)}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button,select{cursor:pointer}button{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 16px;color:var(--ink);font-weight:600}button:hover{background:#eaf4f3}button.primary{background:var(--accent);color:white;border-color:var(--accent)}button.danger{color:#a12d36}button:disabled{opacity:.5;cursor:not-allowed}button[aria-pressed=true]{background:#d8f2ed;border-color:var(--accent)}:focus-visible{outline:3px solid #328edb;outline-offset:3px}input,select,textarea{border:1px solid #aabac5;border-radius:9px;background:white;color:var(--ink);padding:11px;max-width:100%}textarea{width:100%;resize:vertical;min-height:100px}label{display:grid;gap:7px;font-size:14px;font-weight:600}h1,h2,h3,p{margin-top:0}h1{font-size:25px;margin:7px 0 0;letter-spacing:-.5px}h2{font-size:25px}h3{font-size:17px}p{line-height:1.65}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--muted)}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 5%;background:white;border-bottom:1px solid var(--line)}.top-actions{display:flex;align-items:end;flex-wrap:wrap;gap:10px}.notice{font-size:12px;color:var(--muted);margin:16px 5% 0}.status{margin:8px 5%;font-size:12px;color:var(--muted)}.status.warning{color:#9a3a15;background:#fff1da;padding:12px;border-radius:8px}main{margin:24px auto 40px;width:90%;max-width:1180px;min-height:50vh}.hero{background:linear-gradient(120deg,#123b49,#155c63);color:white;border-radius:20px;padding:30px;margin-bottom:24px;display:flex;justify-content:space-between;gap:24px}.hero p{color:#d5e8e9;max-width:580px;margin-bottom:0}.hero h2{font-size:32px;margin-bottom:10px}.metric{display:flex;flex-direction:column;justify-content:center;min-width:100px}.metric strong{font-size:42px}.grid{display:grid;grid-template-columns:minmax(270px,1fr) minmax(0,1.55fr);gap:24px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 6px 24px #182e4305}.stack{display:grid;gap:16px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.request{border:1px solid var(--line);border-radius:12px;padding:18px;background:white;position:relative}.request p{font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;margin:10px 0}.muted,small{color:var(--muted)}.badge{padding:5px 10px;background:#edf1f5;border-radius:30px;font-size:12px;display:inline-block}.badge.good{background:#e1f4ec;color:#19664b}.badge.active{background:#e4f0fd;color:#205a91}.spec{display:none;border:1px dashed #7684aa;color:#394f78;padding:3px 8px;margin-inline-start:7px;font-size:12px}.spec-on .spec{display:inline-block}.spec-tag{display:inline-block;font-size:12px;padding:5px 9px;border-radius:6px;margin-bottom:14px;background:#dfedff}.spec-tag.assumption{background:#fff0cd}.spec-tag.question{background:#f2e4ff}.footer{padding:20px 5%;border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}dialog{border:0;border-radius:18px;width:min(620px,94vw);max-height:88vh;padding:24px;color:var(--ink);box-shadow:0 30px 100px #182e4340}dialog::backdrop{background:#0c233766;backdrop-filter:blur(3px)}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:20px}.dialog-head h2{font-size:22px;margin:0}#panel-body{display:grid;gap:15px}#panel-body p{margin-bottom:0}.comment-row{border:1px solid var(--line);padding:14px;border-radius:10px}.comment-row p{white-space:pre-wrap;overflow-wrap:anywhere}.marker{position:absolute;z-index:5;background:#7856ae;color:white;border:2px solid white;border-radius:50%;width:32px;height:32px;padding:0;box-shadow:0 3px 8px #0003}.marker:hover{background:#533681}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:12px 20px;border-radius:12px;z-index:20;max-width:90vw}.annotation-on [data-anchor]{outline:1px dashed #7856ae;cursor:crosshair}.empty{text-align:center;padding:28px;color:var(--muted)}.error{color:#a12d36;font-size:14px}.toolbar{display:flex;flex-wrap:wrap;gap:8px}.code{direction:ltr;text-align:left;font-family:monospace;font-size:12px;min-height:180px}#markers{position:absolute;inset:0;pointer-events:none}#markers .marker{pointer-events:auto}@media(max-width:720px){.topbar{align-items:stretch;flex-direction:column;padding:20px 5%}.top-actions{align-items:center}.top-actions label{flex:1}.top-actions select{width:100%}.hero{padding:24px}.hero h2{font-size:26px}.metric{min-width:65px}.metric strong{font-size:32px}.grid{grid-template-columns:1fr}.card{padding:18px}.footer{flex-direction:column;align-items:start}.top-actions button{padding:10px}.marker{width:30px;height:30px}main{margin-top:18px}}
+.hero .eyebrow{color:#bbd9dc}.request small{overflow-wrap:anywhere}@media(max-width:720px){.top-actions label{flex-basis:100%}.top-actions button{flex:1}}
+</style></head>
+<body>
+<header class="topbar"><div><span class="eyebrow">PROTOTYPE STUDIO · <span id="version"></span></span><h1 id="title"></h1></div><div class="top-actions"><label>תצוגה <select id="view"></select></label><button id="spec-toggle" aria-pressed="false">מצב אפיון</button><button id="review-open">סקירה והערות <span id="comment-count">0</span></button></div></header>
+<p class="notice">הדגמה עם נתונים פיקטיביים · הפעולות והחיבורים מדומים</p>
+<p id="storage-status" role="status" class="status"></p>
+<main id="app" data-anchor="screen" tabindex="-1"></main>
+<footer class="footer"><span>הנתונים מקומיים לדפדפן ולמיקום הקובץ; אינם משותפים אוטומטית. מומלץ לייצא גיבוי. אין להזין סודות.</span><button id="data-open">נתונים · ייצוא וייבוא</button></footer>
+<div id="markers" aria-label="הערות סוקרים"></div><p id="toast" role="status" class="toast" hidden></p>
+<dialog id="panel" aria-labelledby="panel-title"><header class="dialog-head"><h2 id="panel-title"></h2><button id="panel-close" aria-label="סגירה">✕</button></header><div id="panel-body"></div></dialog>
+<script>/* Fictitious example adapter; stable anchors are part of the review contract. */
+window.PrototypeApp = {
+  id:'citizen-service-demo',version:'1.0.0',title:'קשר · שירות לתושב',
+  views:[{id:'citizen',label:'אזרח / הגשת פנייה'},{id:'clerk',label:'עובד / טיפול בפניות'}],
+  initial:()=>({draft:{subject:'',details:''},filter:'all',records:[
+    {id:'demo-101',subject:'תאורת רחוב אינה פועלת',details:'התאורה ליד הגינה הציבורית אינה פועלת. נתוני דוגמה בלבד.',status:'new'},
+    {id:'demo-102',subject:'בירור מועד פינוי גזם',details:'בקשה למידע על מועד הפינוי בשכונה לדוגמה.',status:'working'}]}),
+  validate:d=>{
+    if(!d || typeof d!=='object' || !d.draft || typeof d.draft.subject!=='string' || d.draft.subject.length>120 || typeof d.draft.details!=='string' || d.draft.details.length>2000 || !['all','new','working','done'].includes(d.filter) || !Array.isArray(d.records) || d.records.length>1000)return false;
+    const ids=new Set();return d.records.every(r=>{if(!r || typeof r.id!=='string' || !/^[a-zA-Z0-9-]{1,100}$/.test(r.id) || ids.has(r.id) || typeof r.subject!=='string' || !r.subject.trim() || r.subject.length>120 || typeof r.details!=='string' || r.details.length>2000 || !['new','working','done'].includes(r.status))return false;ids.add(r.id);return true;});
+  },
+  render(root,ctx){
+    const {el,button,data,view,spec,update,persist,toast,uid}=ctx;
+    const anchor=(n,id,label)=>{n.dataset.anchor=id;n.dataset.label=label;return n;};
+    const hero=el('section',undefined,'hero');const intro=el('div');intro.append(el('span','שירות קרוב. תהליך ברור.','eyebrow'),el('h2',view==='citizen'?'במה נוכל לעזור היום?':'כל פנייה מקבלת מענה.'),el('p',view==='citizen'?'פותחים פנייה, עוקבים אחרי ההתקדמות ורואים מה השתנה — במקום אחד.':'תמונת מצב מרוכזת של הפניות, מהקבלה ועד להשלמת הטיפול.'));
+    const metric=el('div',undefined,'metric');metric.append(el('strong',String(data.records.filter(r=>r.status!=='done').length)),el('span','פניות פתוחות'));hero.append(intro,metric);root.append(hero);
+    const grid=el('div',undefined,'grid');root.append(grid);
+    const side=anchor(el('section',undefined,'card'),'request-form','פתיחת פנייה');grid.append(side);
+    if(view==='citizen'){
+      const heading=el('h3','פנייה חדשה');spec(heading,'assumption','שדות ופרטיות','הנחת הדגמה: אין הזדהות או פרטים אישיים. במוצר אמיתי נדרש להגדיר הזדהות והרשאות; החלפת התצוגה כאן מדומה.');side.append(heading);
+      const form=el('form');form.className='stack';
+      const subjectLabel=el('label','נושא הפנייה');const subject=anchor(el('input'),'subject-input','נושא הפנייה');subject.name='subject';subject.required=true;subject.maxLength=120;subject.placeholder='למשל: תאורה בגינה הציבורית';subject.value=data.draft.subject;subjectLabel.append(subject);spec(subjectLabel,'assumption','אימות נושא','הנחה: נושא חובה, עד 120 תווים. רווחים בלבד אינם נושא תקין. הטיוטה נשמרת בכל שינוי.');
+      const detailsLabel=el('label','איך נוכל לעזור?');const details=anchor(el('textarea'),'details-input','תיאור הפנייה');details.name='details';details.maxLength=2000;details.placeholder='תיאור קצר יסייע לנו לטפל בפנייה';details.value=data.draft.details;detailsLabel.append(details);
+      subject.oninput=()=>{subject.setCustomValidity('');persist(d=>d.draft.subject=subject.value);};details.oninput=()=>persist(d=>d.draft.details=details.value);
+      const send=anchor(el('button','שליחת פנייה','primary'),'submit-request','שליחת פנייה');send.type='submit';
+      form.append(subjectLabel,detailsLabel,send);side.append(form);spec(side,'requirement','שליחה מדומה','דרישת דוגמת הבדיקה: שליחה יוצרת רשומה מקומית במצב חדש ומנקה את הטיוטה. אין שליחת דוא״ל, הודעה או קריאה לשירות חיצוני.');
+      form.onsubmit=e=>{e.preventDefault();if(!subject.value.trim()){subject.setCustomValidity('נא להזין נושא');subject.reportValidity();return;}if(data.records.length>=1000){toast('ההדגמה מוגבלת ל־1000 פניות.');return;}update(d=>{d.records.unshift({id:uid(),subject:subject.value.trim(),details:details.value.trim(),status:'new'});d.draft={subject:'',details:''};});toast('הפנייה נוצרה בהצלחה בהדגמה');};
+    }else{
+      side.append(el('h3','סביבת הטיפול'),el('p','בחרו פנייה ברשימה והתקדמו משלב הקבלה לטיפול ולסיום. השינוי יוצג גם בתצוגת האזרח.'));
+      const label=el('label','סינון לפי מצב');const filter=anchor(el('select'),'status-filter','סינון פניות');[['all','כל הפניות'],['new','חדשות'],['working','בטיפול'],['done','הושלמו']].forEach(([value,text])=>{const o=el('option',text);o.value=value;filter.append(o);});filter.value=data.filter;filter.onchange=()=>update(d=>d.filter=filter.value);label.append(filter);side.append(label);spec(side,'question','זמני שירות והסלמה','שאלה פתוחה: מהו זמן הטיפול הרצוי, ומתי מעבירים פנייה לממונה? לא נקבע SLA ולא מופעלות הסלמות בדוגמה.');
+    }
+    const list=anchor(el('section',undefined,'card stack'),'requests-list','רשימת הפניות');grid.append(list);const heading=el('h3',view==='citizen'?'הפניות שלי':'תור הפניות');list.append(heading);spec(heading,'assumption','היקף הרשומות','כל הרשומות שייכות לאותו אזרח פיקטיבי. במערכת אמיתית נדרש סינון לפי הרשאות.');
+    const statuses={new:'חדשה',working:'בטיפול',done:'הושלמה'};
+    const records=data.records.filter(r=>view==='citizen' || data.filter==='all' || r.status===data.filter);
+    if(!records.length)list.append(el('p','אין פניות בתצוגה זו. נסו לשנות את הסינון או ליצור פנייה.','empty'));
+    records.forEach(r=>{
+      const card=anchor(el('article',undefined,'request'),`request-${r.id}`,r.subject);const top=el('div',undefined,'row');top.append(el('strong',r.subject),el('span',statuses[r.status],`badge ${r.status==='done'?'good':r.status==='working'?'active':''}`));card.append(top,el('p',r.details || 'ללא פרטים נוספים'),el('small',`מזהה: ${r.id}`));
+      if(view==='clerk' && r.status!=='done'){
+        const action=anchor(button(r.status==='new'?'התחלת טיפול':'סיום טיפול',()=>update(d=>{d.records.find(item=>item.id===r.id).status=r.status==='new'?'working':'done';})),`advance-${r.id}`,`קידום הפנייה: ${r.subject}`);card.append(action);
+        spec(card,'assumption','מעבר בין מצבים','הנחה: חדשה ← בטיפול ← הושלמה. אין חזרה לאחור או מחיקה בדוגמה. השלמה מוצגת גם לאזרח; חיבור למערכת תפעולית הוא עתידי ומדומה בלבד.');
+      }
+      list.append(card);
+    });
+  }
+};
+</script>
+<script>/* Generic offline review runtime. All domain rendering belongs to PrototypeApp. */
+(() => {
+  'use strict';
+  const app = window.PrototypeApp;
+  const $ = id => document.getElementById(id);
+  const clone = value => JSON.parse(JSON.stringify(value));
+  const uid = () => globalThis.crypto?.randomUUID?.() || Date.now().toString(36) + Math.random().toString(36).slice(2);
+  const key = `prototype-builder:${app.id}:database`;
+  const schemaVersion = 1;
+  let state, saveBlocked = false, annotationMode = false, pendingImport, focusReturn;
+  let toastTimer;
+  const el = (tag, text, className) => {
+    const n = document.createElement(tag);
+    if (text !== undefined) n.textContent = text;
+    if (className) n.className = className;
+    return n;
+  };
+  const button = (text, action, cls) => {
+    const b = el('button', text, cls); b.type = 'button'; b.addEventListener('click', action); return b;
+  };
+  const toast = text => { $('toast').textContent = text; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => $('toast').hidden = true, 5000); };
+  const warning = text => { $('storage-status').textContent = text; $('storage-status').className = 'status warning'; };
+  const fresh = () => ({ format:'prototype-builder', schemaVersion, prototypeId:app.id, appVersion:app.version, updatedAt:new Date().toISOString(), app:app.initial(), settings:{view:app.views[0].id,spec:false,reviewer:''}, comments:[] });
+  const isString = (v, max=10000) => typeof v === 'string' && v.length <= max;
+  const isObject = v => v !== null && typeof v === 'object' && !Array.isArray(v);
+  function validate(value) {
+    if (!isObject(value) || value.format !== 'prototype-builder') throw Error('זה אינו קובץ נתוני פרוטוטייפ.');
+    if (value.prototypeId !== app.id) throw Error('הקובץ שייך לפרוטוטייפ אחר.');
+    if (value.schemaVersion !== schemaVersion || value.appVersion !== app.version) throw Error('גרסת הנתונים אינה תואמת. השתמשו בגרסת HTML המתאימה; הנתונים הקיימים נשמרו.');
+    if (!isObject(value.settings) || !app.views.some(v=>v.id===value.settings.view) || typeof value.settings.spec !== 'boolean' || !isString(value.settings.reviewer,100)) throw Error('הגדרות הקובץ אינן תקינות.');
+    if (!isString(value.updatedAt,100) || !Number.isFinite(Date.parse(value.updatedAt))) throw Error('תאריך העדכון אינו תקין.');
+    if (!Array.isArray(value.comments) || value.comments.length>1000) throw Error('רשימת ההערות אינה תקינה או גדולה מדי.');
+    const ids = new Set();
+    for (const c of value.comments) {
+      if (!isObject(c) || !isString(c.id,100) || !c.id || ids.has(c.id) || !isString(c.author,100) || !c.author.trim() || !isString(c.text,5000) || !c.text.trim() || !isString(c.view,100) || !isString(c.target,200) || !isString(c.createdAt,100) || !Number.isFinite(Date.parse(c.createdAt)) || !isString(c.updatedAt,100) || !Number.isFinite(Date.parse(c.updatedAt)) || !Number.isFinite(c.x) || !Number.isFinite(c.y) || c.x<0 || c.x>1 || c.y<0 || c.y>1) throw Error('אחת ההערות אינה תקינה.');
+      ids.add(c.id);
+    }
+    if (app.validate(value.app) !== true) throw Error('נתוני היישום אינם תואמים למבנה הנדרש.');
+    return clone(value);
+  }
+  function save() {
+    state.updatedAt = new Date().toISOString();
+    if (saveBlocked) return false;
+    try {
+      localStorage.setItem(key, JSON.stringify(state));
+      $('storage-status').textContent = 'נשמר מקומית · ייצוא JSON מאפשר גיבוי ושיתוף';
+      $('storage-status').className='status';
+      return true;
+    } catch (_) { warning('השמירה בדפדפן אינה זמינה או שהאחסון מלא. העבודה נשמרת בזיכרון רק כעת — ייצאו JSON לפני סגירה.'); return false; }
+  }
+  try {
+    const raw = localStorage.getItem(key);
+    state = raw === null ? fresh() : validate(JSON.parse(raw));
+    save();
+  } catch (_) {
+    state = fresh(); saveBlocked = true;
+    warning('לא ניתן לטעון נתונים מקומיים. מוצגת דוגמה זמנית ללא דריסת הנתונים הקודמים. אפשר לייצא, לייבא גיבוי או לאפס במפורש.');
+  }
+  const body = $('panel-body');
+  function openPanel(title) {
+    if (!$('panel').open) focusReturn = document.activeElement;
+    $('panel-title').textContent=title; body.replaceChildren();
+    if (!$('panel').open) $('panel').showModal();
+  }
+  function closePanel() { $('panel').close(); focusReturn?.focus?.(); }
+  $('panel-close').onclick = closePanel;
+  $('panel').addEventListener('close',()=>focusReturn?.focus?.());
+  function confirmAction(title, description, action) {
+    openPanel(title); body.append(el('p',description));
+    const row=el('div',undefined,'toolbar'); row.append(button('ביטול',closePanel),button('אישור',()=>{closePanel();action();},'primary'));body.append(row);
+  }
+  const anchors = () => [...$('app').querySelectorAll('[data-anchor]'),$('app')];
+  const targetFor = id => anchors().find(n=>n.dataset.anchor===id);
+  function drawMarkers() {
+    $('markers').replaceChildren();
+    state.comments.filter(c=>c.view===state.settings.view).forEach(c=>{
+      const target = targetFor(c.target); if (!target || !target.getClientRects().length) return;
+      const r=target.getBoundingClientRect();
+      const b=button('●',()=>editComment(c),'marker');
+      b.setAttribute('aria-label',`הערה של ${c.author}: ${c.text.slice(0,60)}`);
+      b.title=`${c.author}: ${c.text.slice(0,100)}`;
+      b.style.left=`${Math.max(0,Math.min(document.documentElement.clientWidth-34,r.left+r.width*c.x-16))+scrollX}px`;
+      b.style.top=`${r.top+scrollY+r.height*c.y-16}px`;
+      $('markers').append(b);
+    });
+    $('comment-count').textContent=state.comments.length;
+  }
+  function render() {
+    document.body.classList.toggle('spec-on',state.settings.spec);
+    document.body.classList.toggle('annotation-on',annotationMode);
+    $('spec-toggle').setAttribute('aria-pressed',String(state.settings.spec));
+    $('spec-toggle').textContent=state.settings.spec?'מצב הדגמה':'מצב אפיון';
+    $('view').value=state.settings.view;
+    $('markers').replaceChildren();
+    $('app').replaceChildren();
+    app.render($('app'), {
+      data:state.app, view:state.settings.view, el, button, uid,
+      update: fn=>{fn(state.app);save();render();},
+      persist: fn=>{fn(state.app);save();},
+      toast,
+      spec:(target,kind,title,text)=>{
+        const names={requirement:'דרישה',assumption:'הנחה',question:'שאלה פתוחה'};
+        const b=button('ⓘ '+names[kind],()=>{
+          openPanel(title);body.append(el('span',names[kind],`spec-tag ${kind}`),el('p',text));
+        },'spec'); b.setAttribute('aria-label',`אפיון: ${title}`);target.append(b);
+      }
+    });
+    requestAnimationFrame(drawMarkers);
+  }
+  function editComment(existing, anchor) {
+    if (!existing && state.comments.length >= 1000) { toast('ההדגמה מוגבלת ל־1000 הערות. ייצאו גיבוי לפני הסרת הערות.'); return; }
+    openPanel(existing?'הערת סוקר':'הוספת הערה');
+    const form=el('form');form.className='stack';
+    const nameLabel=el('label','שם הסוקר');const name=el('input');name.required=true;name.maxLength=100;name.value=existing?.author || state.settings.reviewer;nameLabel.append(name);
+    const textLabel=el('label','שאלה או הערה');const text=el('textarea');text.required=true;text.maxLength=5000;text.value=existing?.text || '';textLabel.append(text);
+    form.append(nameLabel,textLabel);
+    const hint=el('p',existing?'עריכה ומחיקה משנות את העותק המקומי בלבד. שמות סוקרים הם תוויות, ללא אימות זהות.':'ההערה תוצמד לאזור שבחרתם ותישמר בעותק המקומי.','muted');form.append(hint);
+    const actions=el('div',undefined,'toolbar');const submit=el('button','שמירת הערה','primary');submit.type='submit';actions.append(submit,button('ביטול',closePanel));
+    if(existing) actions.append(button('מחיקת הערה',()=>confirmAction('מחיקת הערה','למחוק את ההערה מהעותק המקומי?',()=>{state.comments=state.comments.filter(c=>c.id!==existing.id);save();render();}),'danger'));
+    form.append(actions);body.append(form);
+    form.onsubmit=e=>{e.preventDefault();if(!name.value.trim() || !text.value.trim())return;
+      const now=new Date().toISOString();
+      const c=existing || {id:uid(),createdAt:now,...anchor};
+      Object.assign(c,{author:name.value.trim(),text:text.value.trim(),updatedAt:now});
+      state.settings.reviewer=c.author;if(!existing)state.comments.push(c);
+      save();closePanel();annotationMode=false;render();toast('ההערה נוספה לעותק המקומי');
+    };
+    name.focus();
+  }
+  $('app').addEventListener('click',e=>{
+    if(!e.ctrlKey && !annotationMode)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    const target=e.target.closest('[data-anchor]') || $('app');const r=target.getBoundingClientRect();
+    editComment(null,{view:state.settings.view,target:target.dataset.anchor,x:r.width?Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)):.5,y:r.height?Math.max(0,Math.min(1,(e.clientY-r.top)/r.height)):.5});
+  },true);
+  function reviews() {
+    openPanel('סקירה והערות');
+    body.append(el('p','Ctrl ולחיצה על אזור במסך מוסיפים הערה. במגע: הפעילו בחירה ולחצו על אזור. במקלדת: בחרו אזור מהרשימה.'));
+    body.append(button(annotationMode?'ביטול מצב בחירה':'בחירת אזור להערה',()=>{annotationMode=!annotationMode;closePanel();render();if(annotationMode)toast('בחרו אזור להערה. Esc מבטל.');}));
+    const label=el('label','אזור להערה באמצעות מקלדת');const select=el('select');
+    anchors().forEach(n=>{const option=el('option',n.dataset.label || n.dataset.anchor);option.value=n.dataset.anchor;select.append(option);});label.append(select);body.append(label,button('הוספת הערה לאזור שנבחר',()=>editComment(null,{view:state.settings.view,target:select.value,x:.95,y:.1})));
+    if(!state.comments.length)body.append(el('p','אין עדיין הערות. הוסיפו שאלה או הצעה לשיפור.','empty'));
+    state.comments.forEach(c=>{
+      const row=el('div',undefined,'comment-row');
+      const view=app.views.find(v=>v.id===c.view);
+      const found=c.view===state.settings.view && !!targetFor(c.target);
+      row.append(el('strong',c.author),el('p',c.text),el('small',`${view?.label || c.view} · ${new Date(c.createdAt).toLocaleString()}${found?'':' · היעד אינו מוצג כעת; ההערה נשמרה'}`));
+      row.append(button('פתיחה / עריכה',()=>editComment(c)));
+      if(view)row.append(button('מעבר לתצוגה',()=>{state.settings.view=c.view;save();closePanel();render();}));
+      body.append(row);
+    });
+  }
+  function snapshot(){ return JSON.stringify(state,null,2); }
+  function download(text, filename) {
+    const url=URL.createObjectURL(new Blob([text],{type:'application/json'}));
+    const a=el('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  async function copy() {
+    const text=snapshot();
+    try { await navigator.clipboard.writeText(text);toast('הנתונים הועתקו'); }
+    catch (_) {
+      openPanel('העתקה ידנית');body.append(el('p','הדפדפן לא מאפשר העתקה אוטומטית. סמנו והעתיקו את הטקסט, או השתמשו בייצוא לקובץ.'));
+      const area=el('textarea');area.className='code';area.value=text;area.readOnly=true;area.setAttribute('aria-label','נתוני JSON להעתקה');body.append(area);area.focus();area.select();
+    }
+  }
+  function prepareImport(text) {
+    try {
+      if(text.length>2_000_000)throw Error('הקובץ גדול מדי. המגבלה היא כ־2MB.');
+      pendingImport=validate(JSON.parse(text));
+      confirmAction('החלפת הנתונים המקומיים',`הקובץ כולל ${pendingImport.comments.length} הערות, בתצוגה ${app.views.find(v=>v.id===pendingImport.settings.view).label}. כל נתוני היישום, ההערות וההגדרות יוחלפו; אין מיזוג. מומלץ לייצא גיבוי לפני האישור.`,()=>{state=pendingImport;pendingImport=null;saveBlocked=false;const saved=save();render();toast(saved?'הנתונים יובאו ונשמרו':'הנתונים יובאו לזיכרון בלבד — ייצאו גיבוי');});
+    } catch(error) { toast('הייבוא נכשל: '+(error instanceof SyntaxError?'JSON אינו תקין.':error.message)); }
+  }
+  function dataPanel() {
+    openPanel('נתונים · ייצוא וייבוא');
+    body.append(el('p','ה־JSON כולל את נתוני היישום, ההערות וההגדרות. שתפו אותו עם אותו קובץ HTML. זהו מידע מקומי, ללא שרת או סנכרון; אין להזין סודות. פתיחה כקובץ מקומי עשויה להגביל שמירה בחלק מהדפדפנים.'));
+    body.append(button('ייצוא JSON לקובץ',()=>download(snapshot(),`${app.id}-review.json`)),button('העתקת JSON',copy));
+    const label=el('label','ייבוא מקובץ JSON');const file=el('input');file.type='file';file.accept='.json,application/json';
+    file.onchange=async()=>{const f=file.files[0];if(!f)return;if(f.size>2_000_000){toast('הקובץ גדול מדי.');return;}try{prepareImport(await f.text());}catch(_){toast('לא ניתן לקרוא את הקובץ.');}};label.append(file);body.append(label);
+    const pasteLabel=el('label','או הדביקו JSON');const paste=el('textarea');paste.className='code';pasteLabel.append(paste);body.append(pasteLabel,button('בדיקת הנתונים לייבוא',()=>prepareImport(paste.value)));
+    body.append(button('איפוס נתוני ההדגמה',()=>confirmAction('איפוס ההדגמה','כל השינויים וההערות המקומיים יימחקו ויוחזרו נתוני הדוגמה. הפעולה אינה ניתנת לביטול ללא גיבוי. להמשיך?',()=>{state=fresh();saveBlocked=false;save();render();toast('נתוני ההדגמה אופסו');}),'danger'));
+  }
+  $('title').textContent=app.title;document.title=app.title;$('version').textContent=app.version;
+  for(const v of app.views){const option=el('option',v.label);option.value=v.id;$('view').append(option);}
+  $('view').onchange=()=>{state.settings.view=$('view').value;save();render();};
+  $('spec-toggle').onclick=()=>{state.settings.spec=!state.settings.spec;save();render();};
+  $('review-open').onclick=reviews;$('data-open').onclick=dataPanel;
+  document.addEventListener('keydown',e=>{if(e.key==='Escape' && annotationMode){annotationMode=false;render();}});
+  window.addEventListener('resize',drawMarkers);window.addEventListener('scroll',drawMarkers,true);
+  window.addEventListener('storage',e=>{if(e.key===key){saveBlocked=true;warning('הנתונים השתנו בחלון אחר. שמירה נעצרה כדי למנוע דריסה. ייצאו את עבודתכם ואז רעננו או ייבאו במפורש.');}});
+  new ResizeObserver(drawMarkers).observe($('app'));
+  render();
+})();
+</script>
+</body></html>
