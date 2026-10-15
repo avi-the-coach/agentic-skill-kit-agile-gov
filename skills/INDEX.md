@@ -60,3 +60,16 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 - **Primary artifact:** One self-contained HTML file with embedded CSS/JavaScript; optional companion JSON data/review snapshot.
 - **Tags:** `product-management`, `prototyping`, `requirements`, `usability`, `interactive-specification`
 - **Relevant roles:** Product Manager, Product Coach, Business Analyst, Agile Coach
+
+
+
+### Weekly Work Review & Reporting
+
+- **Path:** `skills/weekly-work-review/SKILL.md`
+- **Purpose:** Prepare weekly client reports with private context, activity history and follow-up continuity.
+- **Use when:** Weekly reviews/reports, דוח שבועי, דוחות לקוחות, interim client updates, corrections or resuming last week's work.
+- **Typical inputs:** Updates, notes, prior reports, goals and a verified private workspace.
+- **Primary artifact:** Versioned report (Markdown source and optional HTML/chosen presentation) saved in the private workspace, with context/activity/follow-up updates.
+- **Dependency:** Accessible private workspace; write access to persist. Creating a repository is optional onboarding, not a skill.
+- **Tags:** `work-management`, `weekly-reporting`, `client-context`, `private-workspace`
+- **Relevant roles:** Account Manager, Agile Coach, Consultant, Team Lead

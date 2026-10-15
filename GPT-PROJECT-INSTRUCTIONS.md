@@ -11,3 +11,13 @@ Copy the text below into the GPT Project / Agent instructions:
 > Prefer using an existing relevant skill when one exists. If the user is asking to create or improve a capability, follow the repository's skill-building or skill-improvement guidance.
 >
 > Always prefer the latest repository version over remembered copies of these instructions.
+
+
+
+## Optional private workspace
+
+For persistent client work, add this separately to your private project instructions, replacing the placeholder with your own repository. Do not commit the populated setting to the public kit:
+
+> My private workspace is `OWNER/agentic-skill-kit-agile-gov-my-workspace`. Verify that it is private before accessing client data. Read its AGENTS.md and workspace.json, then load only the relevant indexed context and reports. Preserve saved report revisions and verify remote saves. Never store my private data in the shared capability repository.
+
+If no locator is configured, the reporting skill can discover an unambiguous connected private workspace; if several match, it will ask which to use.
