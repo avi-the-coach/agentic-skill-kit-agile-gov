@@ -1,0 +1,13 @@
+📱 *תמונת מצב – מעודכן ל-{{knowledge_as_of_local}}*
+{{State older information cutoff if generated later.}}
+
+*0. כללי* 📌
+{{Only relevant cross-client changes.}}
+
+*{{number}}. {{client_name}}* {{optional_emoji}}
+{{Recent meaningful progress; current material blocker/decision; near-term next action.}}
+
+*{{number}}. {{cross_cutting_initiative}}*
+{{Latest relevant development and next step.}}
+
+{{Remove instructions/placeholders; repeat selected bodies; omit empty sections. Use single asterisks, no tables.}}

@@ -30,3 +30,13 @@ Validate frontmatter, referenced asset paths, JSON examples and required section
 - Rescheduled meeting and corrected past date: append linked records, retain original claim/planned date and separate confirmation timestamp.
 - Due plan with no update: outcome remains unconfirmed on return; do not mark done or create a background reminder.
 - Missing message time: store unknown/date-only precision rather than copying recorded_at into said_at.
+
+
+## Reporting profile cases (v1.2)
+- Full report requested: current executive snapshot per client; enough context without replaying all history.
+- WhatsApp requested: recent progress and near-term next steps selected independently; single asterisks, no tables or sending.
+- Old document ingested today: preserve document cutoff, submission and recorded time separately; do not claim all facts happened on the cutoff date.
+- Full source says approved; shorter variant says in-principle: retain conflict; do not silently upgrade or downgrade approval.
+- An expired plan in an imported source: leave outcome unknown; do not report completion.
+- No prior generated final report but imported snapshot exists: use snapshot as attributed historical baseline, without finalizing it.
+- Source contains actual clients: public templates contain placeholders only; all client data remains private.
