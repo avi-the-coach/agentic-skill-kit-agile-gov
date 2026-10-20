@@ -8,7 +8,7 @@ description: Prepare or revise weekly client work reports, capture interim updat
 ## Name and purpose
 Turn updates into an evidence-aware weekly report and a reliable starting point for the next review. Maintain client context, dated activity and follow-up state separately from audience-facing reports.
 
-Version: 1.0.0. Origin: [Skill Request #2](https://github.com/avi-the-coach/agentic-skill-kit-agile-gov/issues/2).
+Version: 1.1.0. Origin: [Skill Request #2](https://github.com/avi-the-coach/agentic-skill-kit-agile-gov/issues/2).
 
 ## When to use
 Use for one client or a selected group, weekly reviews, interim updates, corrections to saved reports, or resuming prior client work. Route natural-language requests here; users need not know filenames.
@@ -20,13 +20,13 @@ Exclude sales, pricing, contracts and renewals. Annual work-plan creation is a s
 - Required for persistence: an accessible, verified private workspace and write capability for saving.
 - Required for reports: client scope, explicit date range/timezone, intended audience, and updates or an explicit indication that updates are missing.
 - Optional: notes, documents, previous reports, goals/plans, activities, follow-ups, preferred format or an existing report to imitate.
-- For interim capture: client and update; keep unknown event dates unknown, separate from capture time.
+- For interim capture: free-form updates, including mixed clients/topics and unresolved ownership. Do not require client selection before accepting input.
 
 ## Information to collect
 Fill only material gaps: workspace locator; client(s); period; audience/purpose; events, outcomes, decisions and next actions. Learn language, structure and format progressively. Resolve ambiguous names before merging people or clients. Propose explicit dates for “this week”; do not assume week boundaries from language alone.
 
 ## Interaction
-Follow `system/INTERACTION-GUIDELINES.md`. First use covers roughly four areas: scope/period, audience/format, updates, review. Explain these and offer sequential or batch mode; default to one question at a time. Accept free-form dictation. Reuse known context. Ask about earlier open commitments rather than repeating a background interview.
+Follow `system/INTERACTION-GUIDELINES.md`. For report creation, first use covers roughly four areas: scope/period, audience/format, updates, review. Explain these and offer sequential or batch mode; default to one question at a time. Accept free-form dictation. Reuse known context. Ask about earlier open commitments rather than repeating a background interview.
 
 ## Process
 1. **Locate storage.** Read `references/workspace-contract.md` before workspace access or persistence. Resolve storage from private project configuration, an explicit user locator, or connected repository discovery. Verify private visibility and access before reading client content or writing. Read private `AGENTS.md`, `workspace.json` and the indexes. Initialize only missing infrastructure; an empty repository is valid. A generic 404 does not prove emptiness. Never put a personal locator in public kit files.
@@ -36,6 +36,12 @@ Follow `system/INTERACTION-GUIDELINES.md`. First use covers roughly four areas: 
 5. **Review.** Show the draft and a brief proposed-memory-change summary. A requested draft stays `draft`. Mark `final` only after explicit acceptance of that report's content; skill implementation approval is not report approval. Save ordinary user-supplied facts as attributed notes within the authorized workflow. Resolve uncertain identities, conflicts and inferred sensitive assessments before treating them as confirmed context; retain useful unresolved claims as attributed/unconfirmed.
 6. **Save and verify.** Follow the contract: immutable report revisions, unique event IDs, current context/follow-ups, indexes and remote read-back. Prefer one atomic commit. Never overwrite saved revisions or force a branch. On partial failure explain exactly what saved and reconcile actual remote state before retrying. Local files alone do not establish continuity.
 7. **Handoff.** Link the saved report, state period and draft/final status, and identify key open items/gaps. Do not imply distribution. Leave enough indexed state for a new conversation to resume without this chat.
+
+### Free-flow intake and temporal memory
+Accept topic/client switching within and across messages. The agent owns triage: split distinct claims, identify client(s), initiative/topic, record type and dates, then load only relevant context. Never force a one-client interview or a report workflow for intake. Store cross-client records once with links; retain general work topics without inventing a client. Put unclear associations in a pending queue and ask only a targeted question when necessary; save clear portions without waiting.
+Preserve a dated journal of relevant user statements and their derived records using the temporal extension in the workspace contract. Distinguish when the user said something, when it was stored, and when it occurred or is planned. Keep original relative-date wording and resolve against the originating message timestamp/timezone, not the processing day. Never fabricate missing times.
+At the next relevant interaction, review pending associations and plans whose dates have arrived or passed. Ask whether they happened, moved or were cancelled; elapsed time alone establishes none of those. A future event mentioned for context is a plan, not a request to create an automatic reminder. Follow runtime automation rules only if the user actually requests a reminder or background action.
+Summaries are dated views over history, not replacements for it. Distinguish what was known then from what is known now; mark old observations as last known rather than current fact. Keep unresolved commitments visible regardless of age. Briefly confirm what was saved/grouped and any uncertainty, without repeatedly interrupting the user's flow.
 
 ### Interim updates and corrections
 For “record this meeting,” save a dated activity and supported memory updates without forcing a report interview. Deduplicate by source reference and event ID. For corrections, load the exact previous report, retain it, and create the next revision with a supersedes pointer. A correction is draft unless the user explicitly accepts the revised final content. Backdated events use event dates for period selection and capture timestamps for provenance.

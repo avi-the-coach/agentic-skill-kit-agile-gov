@@ -21,3 +21,12 @@ Use synthetic data only; evaluate observable behavior rather than phrase matchin
 | Unknown schema | No silent migration. |
 
 Validate frontmatter, referenced asset paths, JSON examples and required sections. Forward-test a fresh-conversation scenario with a separate agent when available. Synthetic checks do not establish that a real user's report has been reviewed or saved.
+
+
+## Free-flow and temporal cases (v1.1)
+- Mixed clients plus a general topic: split records, link each appropriately, never require choosing one client first.
+- Unknown person/client association: persist clear records, retain ambiguous record in pending queue and ask a targeted question.
+- Yesterday and next week in an old message: resolve from source timestamp, preserve wording/precision; never use processing date.
+- Rescheduled meeting and corrected past date: append linked records, retain original claim/planned date and separate confirmation timestamp.
+- Due plan with no update: outcome remains unconfirmed on return; do not mark done or create a background reminder.
+- Missing message time: store unknown/date-only precision rather than copying recorded_at into said_at.
