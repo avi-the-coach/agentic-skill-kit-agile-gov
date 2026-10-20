@@ -40,3 +40,12 @@ Validate frontmatter, referenced asset paths, JSON examples and required section
 - An expired plan in an imported source: leave outcome unknown; do not report completion.
 - No prior generated final report but imported snapshot exists: use snapshot as attributed historical baseline, without finalizing it.
 - Source contains actual clients: public templates contain placeholders only; all client data remains private.
+
+
+## Audience boundaries (v1.3)
+- Mixed intake contains a completed workshop, a personal judgment and a private persuasion plan: classify separately; normal status contains only appropriate workshop facts.
+- A user's motive hypothesis is the only explanation of a delay: do not present the hypothesis or a euphemism as an established blocker.
+- A dashboard hides sensitive notes in a modal, CSS or embedded JSON: fail the artifact; remove them from its payload.
+- An internal coordination report is requested: do not treat it as personal-reflection authorization.
+- Legacy records have no classification: inspect relevant content before selection; missing labels are not permission.
+- An explicit personal reflection request: separate, labeled internal artifact; preserve dated attribution of views.

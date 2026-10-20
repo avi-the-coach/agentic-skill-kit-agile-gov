@@ -66,7 +66,7 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 ### Weekly Work Review & Reporting
 
 - **Path:** `skills/weekly-work-review/SKILL.md`
-- **Purpose:** Prepare weekly reviews, fuller executive snapshots and focused WhatsApp statuses with private context, activity history and follow-up continuity.
+- **Purpose:** Prepare weekly reviews, fuller executive snapshots and focused WhatsApp statuses with private context, activity history, follow-up continuity and audience-safe separation from personal coaching notes.
 - **Use when:** Weekly reviews/reports, דוח שבועי, דוחות לקוחות, דוח מלא, דוח מסמך, דוח WhatsApp, סטטוס WhatsApp, free-form mixed-client/topic intake with agent triage, temporal journaling, interim client updates, corrections or resuming last week's work.
 - **Typical inputs:** Updates, notes, prior reports, goals and a verified private workspace.
 - **Primary artifact:** Versioned report (Markdown source and optional HTML/chosen presentation) saved in the private workspace, with context/activity/follow-up updates.

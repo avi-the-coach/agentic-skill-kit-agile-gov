@@ -29,3 +29,7 @@ Preserve the relevant supplied text and both variants in a private immutable sou
 Resolve relative expressions against the document's own as-of date when clearly anchored. In rolling documents with apparently stale/mixed wording, retain the expression and mark uncertainty instead of calculating a definitive date. Preserve exact dates as claims even when calendar evidence differs.
 Variants are alternative representations, not two independent confirmations. Link repeated claims to one record and note which variants contain them. Keep omitted detail available privately. Preserve contradictory statuses as unresolved; do not rank versions merely by length or order.
 Store imported reports as sources, with their approval status unknown unless specified. Do not add them as agent-generated finalized reports or invent a reporting-period start. Retrieve indexed imported snapshots as baseline when no prior finalized report exists, explicitly distinguishing the two.
+
+
+## Audience safety
+Apply `audience-boundaries.md` before selecting content for either profile and for dashboard derivatives. Default to audience-report; personal assessments and coaching strategies are excluded. Keep internal-reflection as a separately requested output, not a hidden section of the same artifact.
