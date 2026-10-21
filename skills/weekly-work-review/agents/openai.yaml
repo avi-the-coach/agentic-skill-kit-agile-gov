@@ -1,4 +1,4 @@
 interface:
   display_name: "Weekly Work Review & Reporting"
-  short_description: "Review client progress with persistent private context"
-  default_prompt: "Use $weekly-work-review to prepare my weekly client report using my private workspace."
+  short_description: "Create reports from shared private work context"
+  default_prompt: "Use $weekly-work-review to prepare my weekly report from my private work context."

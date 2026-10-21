@@ -63,13 +63,43 @@ Open a skill's `SKILL.md` only after identifying it here as relevant.
 
 
 
+### Work Memory & Context
+
+- **Path:** `skills/work-memory/SKILL.md`
+- **Purpose:** Initialize/recover private work context and capture source-linked updates, corrections and preferences independently of reporting.
+- **Use when:** Remember or record an update, mixed-client/topic intake, import notes, set up private continuity, or resume work.
+- **Typical inputs:** Conversation, user-selected sources, private configuration and existing context.
+- **Primary artifact:** Verified private journal/timeline/context updates and affected follow-ups/indexes.
+- **Dependency:** Verified private workspace and write capability for persistence; repository creation remains onboarding.
+- **Tags:** `work-memory`, `context`, `private-workspace`, `continuity`
+- **Relevant roles:** Senior Agentic Assistant, Account Manager, Coach, Consultant, Team Lead
+
+### Work Follow-up
+
+- **Path:** `skills/work-followup/SKILL.md`
+- **Purpose:** Review commitments and support next-action decisions or focused meeting preparation using shared memory.
+- **Use when:** What is open/next, review overdue matters, prepare for a meeting, reschedule or confirm outcomes.
+- **Typical inputs:** Goal/scope, relevant context, commitments, dates and selected source records.
+- **Primary artifact:** Focused action/meeting brief plus verified follow-up changes when evidence changes.
+- **Dependency:** Work Memory & Context for durable state; no scheduler or external account access implied.
+- **Tags:** `follow-up`, `commitments`, `meeting-preparation`, `work-management`
+- **Relevant roles:** Senior Agentic Assistant, Account Manager, Coach, Team Lead
+
 ### Weekly Work Review & Reporting
 
 - **Path:** `skills/weekly-work-review/SKILL.md`
-- **Purpose:** Prepare weekly reviews, fuller executive snapshots and focused WhatsApp statuses with private context, activity history, follow-up continuity and audience-safe separation from personal coaching notes.
-- **Use when:** Weekly reviews/reports, דוח שבועי, דוחות לקוחות, דוח מלא, דוח מסמך, דוח WhatsApp, סטטוס WhatsApp, free-form mixed-client/topic intake with agent triage, temporal journaling, interim client updates, corrections or resuming last week's work.
-- **Typical inputs:** Updates, notes, prior reports, goals and a verified private workspace.
-- **Primary artifact:** Versioned report (Markdown source and optional HTML/chosen presentation) saved in the private workspace, with context/activity/follow-up updates.
-- **Dependency:** Accessible private workspace; write access to persist. Creating a repository is optional onboarding, not a skill.
-- **Tags:** `work-management`, `weekly-reporting`, `client-context`, `private-workspace`
-- **Relevant roles:** Account Manager, Agile Coach, Consultant, Team Lead
+- **Purpose:** Produce weekly reviews, executive snapshots and focused short messages from shared private work context.
+- **Use when:** Weekly report, client status, דוח שבועי, דוח מלא, דוח מסמך, סטטוס וואטסאפ; report revision or explicit content approval.
+- **Typical inputs:** Scope/window/audience, updates, shared context, private format preferences and earlier reports.
+- **Primary artifact:** Immutable report revision with metadata and optional requested presentation.
+- **Dependency:** Work Memory & Context for recovery/intake; private write access for persistent versions.
+- **Compatibility:** Older calls for intake/resume or commitment review still route through this path to work-memory/work-followup without forcing a report.
+- **Tags:** `work-management`, `weekly-reporting`, `status`
+- **Relevant roles:** Senior Agentic Assistant, Account Manager, Agile Coach, Consultant, Team Lead
+
+## Role entry points
+
+Roles are perspectives over reusable skills, not skills or separate data stores.
+- **Senior Agentic Assistant (SAA):** `roles/senior-agentic-assistant/ROLE.md`. Use for ongoing work-assistant setup, continuity and collaborative work management.
+- **Account Manager:** `roles/account-manager/ROLE.md`. Client-engagement work-management perspective.
+- Other available roles are described in `roles/README.md`.

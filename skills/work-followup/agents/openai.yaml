@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Follow-up"
+  short_description: "Review commitments and prepare useful next actions"
+  default_prompt: "Use $work-followup to review my open commitments and next actions."

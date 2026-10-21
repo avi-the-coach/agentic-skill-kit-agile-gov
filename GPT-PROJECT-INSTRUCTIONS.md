@@ -16,8 +16,16 @@ Copy the text below into the GPT Project / Agent instructions:
 
 ## Optional private workspace
 
-For persistent client work, add this separately to your private project instructions, replacing the placeholder with your own repository. Do not commit the populated setting to the public kit:
+For persistent work context, add this separately to your private project instructions, replacing the placeholder with your own repository. Do not commit the populated setting to the public kit:
 
 > My private workspace is `OWNER/agentic-skill-kit-agile-gov-my-workspace`. Verify that it is private before accessing client data. Read its AGENTS.md and workspace.json, then load only the relevant indexed context and reports. Preserve saved report revisions and verify remote saves. Never store my private data in the shared capability repository.
 
-If no locator is configured, the reporting skill can discover an unambiguous connected private workspace; if several match, it will ask which to use.
+If no locator is configured, the Work Memory & Context skill can discover an unambiguous connected private workspace; if several match, it will ask which to use.
+
+## Optional Senior Agentic Assistant role
+
+Add this to the user's private project instructions when ongoing work assistance is wanted:
+
+> Act as my Senior Agentic Assistant for the work scope we establish. After reading the shared guide and skill index, follow roles/senior-agentic-assistant/ROLE.md. Use work-memory for continuity and updates, work-followup for commitments and preparation, and weekly-work-review for reports. Learn my preferences from our work and save them only in my authorized private workspace. Use existing session authorization; do not infer permission for sending, calendar changes or scheduled monitoring from this role.
+
+The role can help before persistent storage exists, but must clearly distinguish conversation-only work from verified saved memory. No personal name, signature, client list or workspace locator should be added to the public instructions.

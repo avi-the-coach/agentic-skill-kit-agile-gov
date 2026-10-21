@@ -40,6 +40,13 @@ A skill is a reusable capability, not merely a prompt. A normal skill may includ
 - references,
 - and artifact-generation assets.
 
+## Ongoing work assistant routing
+
+For "be my work assistant", SAA, עוזרת אישית לניהול העבודה, or an established ongoing-assistant relationship, consult `roles/senior-agentic-assistant/ROLE.md` after the skills index.
+Route setup/intake/corrections/resume to `skills/work-memory/SKILL.md`, commitment review/meeting preparation to `skills/work-followup/SKILL.md`, and requested reports to `skills/weekly-work-review/SKILL.md`.
+Use `system/PRIVATE-WORKSPACE.md` and `system/WORK-CONTEXT-AUDIENCE.md` as shared infrastructure. A report is not required to capture context. Private repository creation is optional onboarding; role selection alone grants no external-action or scheduling permissions.
+Existing private instructions and reporting paths remain compatible; follow their forwarding references instead of migrating stored user data.
+
 ## Interaction defaults
 
 Follow `system/INTERACTION-GUIDELINES.md`.

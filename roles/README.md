@@ -1,28 +1,14 @@
 # Roles
 
-Roles provide contextual guidance over the shared skill library.
+Roles provide contextual guidance over reusable skills: priorities, common workflows, terminology, decision heuristics and boundaries. They do not own skills or private memory stores.
 
-A role may define:
+## Available roles
 
-- principles and priorities,
-- common workflows,
-- recommended skills for recurring situations,
-- terminology,
-- decision heuristics,
-- and role-specific cautions.
+| Role | Entry point | Focus |
+| --- | --- | --- |
+| Senior Agentic Assistant (SAA) | [ROLE.md](senior-agentic-assistant/ROLE.md) | Ongoing work relationship, context, judgment and capability routing |
+| Account Manager — Work Management | [ROLE.md](account-manager/ROLE.md) | Client engagements, outcomes and commitments |
+| Product Manager | [ROLE.md](product-manager/ROLE.md) | Product-management perspective |
 
-Roles **do not own skills**.
-
-A skill should normally remain under `skills/` so it can be reused by multiple roles. Role files should reference skills rather than duplicate them.
-
-Example future structure:
-
-```text
-roles/
-  product-manager/
-    ROLE.md
-  product-coach/
-    ROLE.md
-  engineering-manager/
-    ROLE.md
-```
+SAA is a broad work-assistant perspective; Account Manager may complement it for client work. Both reuse memory, follow-up and reporting capabilities from `skills/INDEX.md`.
+Private preferences and data remain in each user's own workspace. Role selection does not enable background activity or additional account permissions.

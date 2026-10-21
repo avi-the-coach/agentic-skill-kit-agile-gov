@@ -49,3 +49,15 @@ Validate frontmatter, referenced asset paths, JSON examples and required section
 - An internal coordination report is requested: do not treat it as personal-reflection authorization.
 - Legacy records have no classification: inspect relevant content before selection; missing labels are not permission.
 - An explicit personal reflection request: separate, labeled internal artifact; preserve dated attribution of views.
+
+## SAA separation (v2.0)
+- Legacy "record this" or "resume" invocation delegates to work-memory without a reporting interview.
+- Legacy "what is open before my meeting" delegates to work-followup.
+- Recovery and reporting use the same schema-v1 workspace; no forced migration or new memory store.
+- Private profile/template overrides remain private; generic defaults do not replace established preferences.
+- Explicit acceptance of a specific report creates a new final revision; approval of a template alone does not.
+- Canonical contract/policy and legacy forwarding references resolve.
+- Run `roles/senior-agentic-assistant/references/acceptance.md` for cross-capability continuity.
+
+## As-of persistence regression
+A requested current-status snapshot with no weekly window uses the canonical same-day snapshot storage bucket, explicit report_kind/snapshot_date/coverage metadata and an audience-specific scope. Index and metadata match; approval creates the next immutable final revision. Preserve claim event/planned/source dates and unknown knowledge_as_of. A historical source with unknown dates remains an imported source; a requested weekly activity report still establishes a real window.

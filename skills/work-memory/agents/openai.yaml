@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Memory & Context"
+  short_description: "Maintain private work context across conversations"
+  default_prompt: "Use $work-memory to capture this update in my private workspace."

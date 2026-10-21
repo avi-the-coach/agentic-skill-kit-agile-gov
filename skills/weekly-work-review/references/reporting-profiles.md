@@ -32,4 +32,9 @@ Store imported reports as sources, with their approval status unknown unless spe
 
 
 ## Audience safety
-Apply `audience-boundaries.md` before selecting content for either profile and for dashboard derivatives. Default to audience-report; personal assessments and coaching strategies are excluded. Keep internal-reflection as a separately requested output, not a hidden section of the same artifact.
+Apply `system/WORK-CONTEXT-AUDIENCE.md` before selecting content for either profile and for dashboard derivatives. Default to audience-report; personal assessments and coaching strategies are excluded. Keep internal-reflection as a separately requested output, not a hidden section of the same artifact.
+
+## Shared memory and private presentation rules
+Import and reconcile source material through `skills/work-memory/SKILL.md`; do not create a separate reporting-only journal.
+Read user-defined private templates and profile rules when present, including title, ordering/grouping, list marker, maximum items, signature and terminal line. Defaults here apply only where no preference exists. Do not promote a user's actual template or signature into the public kit.
+A dashboard is a presentation of selected shared context, not a separate source of truth; use available artifact capabilities and apply the same payload-level audience boundary.
